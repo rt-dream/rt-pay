@@ -66,7 +66,7 @@
             });
             // 模拟支付失败的结果
           } else {
-            this.$refs.pays.$fail();
+            this.$refs.pays.$fail('密码错误');
           }
         }, 1000);
       },
