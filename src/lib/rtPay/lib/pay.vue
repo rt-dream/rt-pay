@@ -214,6 +214,10 @@
     border-radius: 0.313rem;
     box-sizing: content-box;
     user-select: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
   @media screen and (max-width: 320px) {
     .keyboard li {
