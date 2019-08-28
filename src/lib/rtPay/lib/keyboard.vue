@@ -97,7 +97,6 @@
     top: 0;
     bottom: 0;
     width: 100%;
-    max-width: 750px;
     z-index: 9;
     background: transparent;
   }
@@ -220,7 +219,6 @@
     top: 0;
     bottom: 0;
     width: 100%;
-    max-width: 750px;
     background: rgba(0, 0, 0, 0.6);
     z-index: 999;
   }

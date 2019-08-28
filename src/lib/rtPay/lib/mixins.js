@@ -10,6 +10,7 @@
           {
             num: 1,
             character: '',
+            style: true
           },
           {
             num: 2,

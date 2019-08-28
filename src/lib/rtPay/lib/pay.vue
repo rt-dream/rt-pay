@@ -31,7 +31,7 @@
       <ul class="keyboard">
         <li v-for="(val, i) in keyboardList"
             :key="i"
-            :class="{'none': val.type === null, 'zero': val.num === 0, 'delete': val.type === 'delete'}"
+            :class="{'justify-start': val.style, 'none': val.type === null, 'zero': val.num === 0, 'delete': val.type === 'delete'}"
             @click="onKeyboard(val)">
           <p class="num"
              v-if="typeof val.num === 'number'">{{ val.num }}</p>
@@ -120,7 +120,6 @@
     top: 0;
     bottom: 0;
     width: 100%;
-    max-width: 750px;
     z-index: 9;
     background: rgba(0, 0, 0, 0.5);
   }
@@ -242,6 +241,9 @@
   .keyboard li:active {
     background-color: #d1d5db;
   }
+  .keyboard .justify-start {
+    justify-content: start;
+  }
   .keyboard .zero {
     border-bottom: 0;
     line-height: 2.75rem;
@@ -310,7 +312,6 @@
     top: 0;
     bottom: 0;
     width: 100%;
-    max-width: 750px;
     background: rgba(0, 0, 0, 0.6);
     z-index: 999;
   }

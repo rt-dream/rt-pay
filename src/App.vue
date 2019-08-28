@@ -9,7 +9,7 @@
     <!--支付密码弹窗-->
     <rt-pay ref="pays"
             v-model="show"
-            :characterShow="false"
+            :forgetPwdShow="true"
             @close="close"
             @forget="forget"
             @input-end="inputEnd" />
