@@ -2,7 +2,7 @@
 vue移动端支付密码窗插件
 
 ### demo地址
-[demo演示页面](https://chinaberg.github.io/vpay/dist/#/, '支付密码弹窗demo演示页面')
+[demo演示页面](https://rt-dream.github.io/rt-vpay/dist/#/, '支付密码弹窗demo演示页面')
 
 
 ### 插件的安装
@@ -23,7 +23,7 @@ Vue.use(rtPay);
 
 <rt-pay ref="pays"
         v-model="show"
-        :characterShow="false"
+        :forgetPwdShow="true"
         @close="close"
         @forget="forget"
         @input-end="inputEnd" />
@@ -49,6 +49,7 @@ Vue.use(rtPay);
 | 参数 | 说明 | 类型 | 默认值 |  
 | - | :- | :- | :-: |  
 | v-model | 密码框的显示隐藏 | Boolean | false | 
+| forgetPwdShow | 忘记密码显示隐藏 | Boolean | false | 
 | characterShow | 键盘字母显示隐藏 | Boolean | true | 
 | digit | 密码的位数| Number | 6 |
 | ref | 获取当前插件实例 | String | - |
