@@ -1,39 +1,55 @@
-# vpay
-vue移动端支付密码窗插件，仿支付宝密码框。
+# rt-pay
+vue移动端支付密码窗插件
 
 ### demo地址
 [demo演示页面](https://chinaberg.github.io/vpay/dist/#/, '支付密码弹窗demo演示页面')
 
-### 动态图演示
-![支付密码框演示动图](./static/pay.gif)
 
 ### 插件的安装
 #### NPM 
 ```
-npm i vpay
+npm i rt-pay
 ```
 #### 引入插件
 ```
 import Vue from 'vue';
-import vpay from 'vpay';
+import rtPay from 'rt-pay';
 
-Vue.use(vpay);
+Vue.use(rtPay);
 ```
 
 #### 基本用法  
 ```html
-<vpay ref="pays"
-    v-model="show"           
-    @close="close"
-    @forget="forget"
-    @input-end="inputEnd"
-></vpay>
+
+<rt-pay ref="pays"
+        v-model="show"
+        :characterShow="false"
+        @close="close"
+        @forget="forget"
+        @input-end="inputEnd" />
+```
+
+#### 密码框组合数字键盘
+```html
+<rt-pwd @open-keyboard="openKeyboard"
+        :password="password">
+    <template v-slot:keyboard>
+    <rt-keyboard ref="vpays"
+                    v-model="keyboardShow"
+                    :characterShow="false"
+                    @close="close"
+                    @forget="forget"
+                    @emit-pwd="emitPwd"
+                    @input-end="inputEnd1" />
+    </template>
+</rt-pwd>
 ```
 
 ### API  
 | 参数 | 说明 | 类型 | 默认值 |  
 | - | :- | :- | :-: |  
 | v-model | 密码框的显示隐藏 | Boolean | false | 
+| characterShow | 键盘字母显示隐藏 | Boolean | true | 
 | digit | 密码的位数| Number | 6 |
 | ref | 获取当前插件实例 | String | - |
 | title | 弹窗标题 | String | 请输入支付密码 |

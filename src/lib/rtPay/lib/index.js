@@ -1,5 +1,5 @@
 import inputPwd from './password'
-import keyboard from './keyboard';
+import keyboard from './keyboard'
 import vpay from './pay'
 
 const pay = {
