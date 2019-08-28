@@ -1,5 +1,5 @@
 {
-  "name": "rt-vpay",
+  "name": "rt-pay",
   "version": "1.0.0",
   "description": "基于vue项目的移动端支付密码框插件",
   "main": "index.js",
